@@ -2,18 +2,18 @@ server:
   port: 9090
 
 keycloak:
-  realm: YOUR_KEYCLOAK_REALM_NAME
-  auth-server-url: YOUR_KEYCLOAK_URL
+  realm: cydeo-dev
+  auth-server-url: http://localhost:8080/auth/
   ssl-required: none
-  resource: YOUR_KEYCLOAK_CLIENT_NAME
+  resource: ticketing-app
   credentials:
-    secret: YOUR_KEYCLOAK_CLIENT_SECRET
+    secret: 93H6t6UfWY0g4SPMVaWrgyDOxcVFN8IT
   use-resource-role-mappings: true
   bearer-only: true
 
 master:
   user:
-    username: YOUR_KEYCLOAK_MASTER_USER_USERNAME
-    password: YOUR_KEYCLOAK_MASTER_USER_PASSWORD
+    username: admin
+    password: admin
   realm: master
-  client: YOUR_KEYCLOAK_MASTER_CLIENT_NAME
+  client: master-client
